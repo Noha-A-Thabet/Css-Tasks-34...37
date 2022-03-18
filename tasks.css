@@ -1,0 +1,107 @@
+/* Task 1 */
+.task1 div{
+   background-color: #eee;
+   width:300px;
+   height:60px;
+   margin:20px auto;
+}
+
+div:empty{
+    background-color:red;
+}
+
+/* Task 2  */
+.task-two{
+    background-color:darkgray;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 10px;
+    width: 350px;
+    height: 30px;
+}
+
+.task-two::first-letter{
+visibility: hidden;
+}
+
+.task-two::before{
+    content: "1";
+    position: absolute;
+    background-color:red;
+    width:30px;
+    height:35px;
+    text-align: center;
+    font-size:30px;
+    color:white;
+    top:50%;
+    margin-top:-15px;
+    left:-15px;
+}
+
+/* Task 3  */
+
+.task3 p{
+    position: relative;
+    background-color:#eee;
+    width:400px;
+    height:30px;
+    text-align: center;
+    padding-top:8px;
+    margin:20px auto;
+    line-height: 2;
+    font-weight: bold;
+    border-left:3px solid #e91e63;
+}
+
+.task3 p::before{
+    content:attr(data-person);
+    background-color: darkgray;
+    position: absolute;
+    margin-top:-8px;
+    left:-120px;
+    width:70px;
+    height:35px;
+}
+
+.task3 p::after{
+    content:"";
+    position: absolute;
+    background-color: transparent;
+    height:0;
+    border-width: 12px;
+    border-style: solid;
+    border-color:transparent #e91e63 transparent transparent;
+    left:-27px;
+}
+
+/* Task 4  */
+
+.task4 p {
+    background-color:#eee;
+    width:400px;
+    text-align: center;
+    height:45px;
+    line-height:2.6;
+    font-weight:bold;
+    border-right:4px solid red;
+    margin:30px auto;
+    counter-increment: p-increment;
+    position: relative;
+}
+
+.task4 p::before{
+    content:counter(p-increment);
+    position: absolute;
+    width:30px;
+    height:45px;
+    text-align: center;
+    background-color:red;
+    line-height:2.8;
+    top:50%;
+    margin-top:-22px;
+    left:-15px; 
+
+
+}
